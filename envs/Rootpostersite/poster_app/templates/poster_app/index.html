@@ -21,6 +21,7 @@
             margin: 10px;
             padding: 1em;
         }
+
         nab {
             float: right;
             max-width: 160px;
@@ -28,14 +29,15 @@
             padding: 1em;
         }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            nav ul a {
+                text-decoration: none;
             }
 
-                nav ul a {
-                    text-decoration: none;
-                }
         nab ul {
             list-style-type: none;
             padding: 0;
@@ -44,6 +46,7 @@
             nab ul a {
                 text-decoration: none;
             }
+
         article {
             margin-left: 170px;
             border-left: 1px solid gray;
@@ -62,16 +65,11 @@
 
         <nav>
             <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 3</a></li>
+                {% for opportunities in all_poster%}
+                <li><a href="/poster_app/{{ opportunities.id }}/">{{ opportunities.Poster_Name }}</a></li>
+                {% endfor%}
             </ul>
         </nav>
-        <nab>
-            <ul>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 4</a></li>
-            </ul>
-        </nab>
         <footer>ROOT 2017</footer>
 
     </div>

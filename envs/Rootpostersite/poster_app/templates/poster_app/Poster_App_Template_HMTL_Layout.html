@@ -62,16 +62,11 @@
 
         <nav>
             <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 3</a></li>
+                {% for opportunities in all_poster%}
+                <li><a href="/poster_app/{{ opportunities.id }}/">{{ opportunities.Poster_Name }}</a></li>
+                {% endfor%}
             </ul>
         </nav>
-        <nab>
-            <ul>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 4</a></li>
-            </ul>
-        </nab>
         <footer>ROOT 2017</footer>
 
     </div>
